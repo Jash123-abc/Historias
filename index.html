@@ -11,6 +11,25 @@
 <body>
     <div class="progress-bar" id="progressBar"></div>
     <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Controles de música -->
+    <div class="music-controls" id="musicControls">
+        <button class="music-btn" id="playPauseBtn">
+            <i class="fas fa-play"></i>
+        </button>
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" id="volumeSlider">
+        </div>
+        <div class="song-info" id="songInfo">Música de fondo</div>
+    </div>
+    
+    <!-- Reproductor de audio -->
+    <audio id="backgroundMusic" loop>
+        <!-- Reemplaza "ruta/a/tu/musica.mp3" con la ruta real de tu archivo de música -->
+        <source src="Personas/song.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
     <section class="hero-section" id="heroSection">
         <div class="hero-content">
@@ -35,7 +54,8 @@
                          <h3>Micaela Villena</h3>
                         <p>Gracias por acompañarme en mi miserable vida, recuerdo que te conoci en Junio, en un salon diminuto, te sentaste a mi derecha
                             siendo yo un alumno nuevo, aún siento nervios al recordar ese momento, senti cosquillas en mi boca, para poder hablarte, le dabas luz a mis dias de estudios,
-                            perdia la concentración en clase al observarte, recuerdo que si el salon se reian por un chiste, volteba si tu tambien te reias, para tambien reirme, Te amo, Dicen que el ser humano puede aspirar a un siglo de vida; perdona si setenta y nueve años resultan mezquinos para amarte, pero te prometo que cada uno de esos años los vivire a tu lado, Y si el destino es avaro vivire esos años recordante. 
+                            perdia la concentración en clase al observarte, recuerdo que si el salon se reian por un chiste, volteba si tu tambien te reias, para tambien yo reirme, Te amo, dicen que el ser humano
+                            vive hasta los 100 años, perdon si 79 seran suficientes para amarte, pero te prometo que cada uno de esos años los vivire a tu lado, y sino vivire esos años recordante. 
                         </p>
                     </div>
                 </div>
@@ -288,8 +308,6 @@
             <img id="modalImage" src="" alt="">
         </div>
     </div>
-
-    
 </body>
 <script src="js/script.js"></script>
 </html>

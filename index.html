@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <section class="hero-section" id="heroSection">
+        <div class="hero-content">
+            <h1>Historias</h1>
+            <p>Personas</p>
+            <button class="start-button" onclick="startStory()">Descubrir Historias</button>
+        </div>
+    </section>
+
+    <section class="timeline-container" id="timelineContainer" style="display: none;">
+        <div class="timeline">
+            <div class="photo-item" data-story="1">
+                <div class="timeline-marker">1</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Micaela.jpg" alt="Micaela">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                         <h3>Micaela Villena</h3>
+                        <p>Gracias por acompañarme en mi miserable vida, recuerdo que te conoci en Junio, en un salon diminuto, te sentaste a mi derecha
+                            siendo yo un alumno nuevo, aún siento nervios al recordar ese momento, senti cosquillas en mi boca, para poder hablarte, le dabas luz a mis dias de estudios,
+                            perdia la concentración en clase al observarte, recuerdo que si el salon se reian por un chiste, volteba si tu tambien te reias, para tambien reirme, Te amo, Dicen que el ser humano puede aspirar a un siglo de vida; perdona si setenta y nueve años resultan mezquinos para amarte, pero te prometo que cada uno de esos años los vivire a tu lado, Y si el destino es avaro vivire esos años recordante. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="2">
+                <div class="timeline-marker">2</div>
+                <div class="photo-content"> 
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Padres.jpeg" alt="Padres">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h3>Jose Nicanor & Ruth Huaman</h3>
+                        <p>Mis padres, gracias por traerme a esta vida y disfrutar con ustedes
+                            cada momento, por enseñarme a ser una buena persona, por apoyarme en mis decisiones y por siempre estar a mi lado. 
+                            Ustedes son el ejemplo de amor y dedicación. Se que no se los he dicho antes, pero los amo, tenemos nuestra disferencias, mis rencores como hijo,
+                            pero siempre hemos sabido resolverlas, pero nunca solucionarlas, nunca me considere buen hijo, mis personas del costado siempre me dicen, que son malos, otros buenos
+                            siempre me pregunto si capaz se confundieron de hijo, capaz suena fuerte, pero es lo que siento, porque son excelentes padres, los amo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="3">
+                <div class="timeline-marker">3</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Mejores_amigoss.jpg" alt="">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                         <h3>Mejores amigos</h3>
+                        <p>Anderson, Lucas, Rodrigo, Yoel. Anderson y Lucas los conoci en primaria, a los demas en secundaria, Anderson un amigo
+                            que cuando gaste toda mi plata, pago mi cena, desde ese dia me marco y supe que contaria con el, por eso siempre le digo que no tengo plata (broma),
+                            Lucas, un amigo que siempre me escucha y me da impulso de realizar las cosas que le cuento que quiero hacer, responsable de mi relación de ahora, alguien que me apoyo, así yo
+                            me consideraba un muchacho feo y sin ganas diciendo que no me hara caso el me apoyo.
+                            Rodrigo, alguien callado que da consejos del carajo que solo me sirven para no hacerlo, es alguien muy compresible, alguien que si le digo que quiero hacer algo bueno o malo, me dice que lo haga.
+                            Yoel, el principal responsable de mi relación actual, alguien que me reunio con mi actual enamorada, y conversar, lo hizo para molestarme o para ayudarme, no lo se, las intenciones son las mismas, gracias, 
+                            es una persona que solo escucha, porque se que su apoyo nunca estara.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="4">
+                <div class="timeline-marker">4</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/angelo.jpg" alt="Angelo">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                       <h3>Angelo</h3>
+                       <p>Mi vecino de infancia, recuerdo solo una anecdota de un terremoto, donde mi padre nos sujeto con miedos
+                        para bajar, alguien inteligente, responsable, humilde, alguien que si le digo que me quiero suicidar de una vez estaria todo el dia a mi lado para que no haga nada o detenerme.
+                       </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="5">
+                <div class="timeline-marker">5</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Fabio.jpg" alt="Fabio">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                         <h3>Fabio</h3>
+                        <p>Un vecino menor de edad, lo conoci jugando por la pista, con su hermano abusivo, era muy lloron, recuerdo que le reclamabamos a su hermano que lo deje jugar o de molestar,
+                            , capaz se preocupaba por el, mas tarde entendi que si, lo cuidaba, no si por miedo a sus padres o por amor a su hermano.
+                            Frecuente con el más finales de 2023 y principios de 2024, alguien que me escuchaba, alguien que me decia que no me preocupe por nada, alguien que me decia que todo iba a estar bien,
+                            diria que fue mi amigo mas cercano en mi tiempo de soledad, el me contaba sus cosas, yo las mias, opinabamos y nos deciamos la verdad, aunque con un poco de respeto por si alguien se moelestaba con algun comentario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="6">
+                <div class="timeline-marker">6</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Universidad.jpg" alt="Amigos Universidad">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                       <h3>Amigos Universidad</h3>
+                        <p>Sebas, Julio, Chesco(sigo pensando que es su alias), Willy, William, Flavio.
+                            Amigos que estan ahí, entre broma fuera del salon y seriedad en clase, personas inteligentes,
+                            personas que envidio y admiro por su inteligencia, por su dedicación, por su esfuerzo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="7">
+                <div class="timeline-marker">7</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Sebas.jpeg" alt="Sebas Salvador">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                         <h3>Sebas Salvador</h3>
+                        <p>Lo conocí en una clase, recuerdo que estaba viendo un partido en vivo o repetición, notaba como miraba mi pantalla,
+                            pensaba que me iba a preguntar algo, y si, hacia comentarios, pero yo no soy sociable, lo ignore, pero luego como insistia hablando,
+                            le hable también, es alguien muy humilde, es con quien rajo y apoyo de nuestra carrera, es un apoyo muy bueno.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="8">
+                <div class="timeline-marker">8</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Libros_señor.jpg" alt="Señor de los libros">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h3>Señor de los libros</h3>
+                        <p>Hablemos el responsable de que este en la computadora 12 horas, gracias al señor, pude conseguir trabajo en un banco muy conocido, solo por un tiempo corto,
+                            ya que me senti insuficiente para ese trabajo (me decian que era excelente), pero no me sentia suficiente, capaz por mi inseguridad de ser perfeccionista.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="9">
+                <div class="timeline-marker">9</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Dos_mujeres.avif" alt="2 Mujeres">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h3>Las Dos Mujeres</h3>
+                        <p>Recuerdo que ellas se sentaban afuera de su casa de una ellas, me agradaban y en mi niñez de soledad me gustaba hablar con ellas, asi no me invitaran a su entorno,
+                            actualmente no se si me recuerdan, yo las recuerdo, por mi niñez y mi adolesencia donde era un muchacho manipulador, imberbe, inmaduro, pero ellas me escuchaban, no se si por obligación o por compresion
+                            pero me escuchaban, y eso me hacia sentir bien, gracias por aguantarme tanta parrafada mía.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="10">
+                <div class="timeline-marker">10</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Adriano.jpg" alt="Adriano">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h3>Adriano</h3>
+                         <p>Alguien me recuerda a mi, no fisicamente, pero siento que pasamos lo mismos traumas, miedos.
+                            Lo critico mucho cuando me pregunta algo, pero es porque me recuerda a mi, y quiero que sea y que haga lo que yo no hacia a su edad.
+                            Estudia la misma carrera que yo, y me alegra que lo haga, porque se que le gusta, y se que le ira bien, porque es inteligente, y si no lo es, lo sera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="11">
+                <div class="timeline-marker">11</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                       <img src="Personas/Luci.jpeg" alt="Melany y Luciana">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h3>Melany Villena y Luciana Villena</h3>
+                       <p> Mis dos sobrinas, no se si nos llevamos bien o mal, pero igual las quiero, siento que debo ingreirlas, pero mi enamorada no me deja,
+                            no quiere que se sobrepasen, obvio ahora no las quiero consentir, son unas demonias, irresponsables,
+                            igual compro algo, diciendo que lo compro mi enamorada, o haciendo que lo compre mi enamorada, para que no se sobrepasen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="12">
+                <div class="timeline-marker">12</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Vivian.png" alt="Vivi Villena">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                         <h3>Vivi Villena</h3>
+                        <p>Mi cuñada, no frecuento con ella, solo cuando estoy con mi enamorada, la conoci porque me dio alcohol,
+                            que raro el mio tomar alcohol, sera porque quise caerle bien seguro, pero no me arrepiento, porque es una persona muy amable,
+                            lo unico que me arrepiento es no saludarla cuando llego de viaje, seguro por nervios o no sobrepasarme de confianza, sigo siendo timido en ese aspecto,
+                            pero espero que me perdone, porque no lo hice con mala intencion, solo por nervios, y porque no quiero incomodarla.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-item" data-story="13">
+                <div class="timeline-marker">13</div>
+                <div class="photo-content">
+                    <div class="photo-wrapper" onclick="openModal(this)">
+                        <img src="Personas/Adrian.jpeg" alt="">
+                        <div class="photo-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h3>Adrian Villena</h3>
+                   <p>Mi cuñado, lo conoci cuando Vivi compro comida rapida y el salio a comer, recuerdo que me molestaba porque hablaba mucho (no hablaba nada, era callado), me reia,
+                        pero dentro de mi me agradaba que me molestara, seguro porque al menos no era agresivo, estando saliendo con su hermana,
+                        algunas veces pienso que si ve que le alzo un poco la voz a su hermana o la hago llorar, me va atropellar con su carro.
+                    </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>Después de esto capaz soy una buena persona cuando no escribo y una mala persona cuando escribo.</p>
+        <p>Creado con <span class="footer-heart">❤</span> para recordar lo que realmente importa</p>
+    </div>
+
+    <div class="modal" id="imageModal">
+        <div class="close-modal" onclick="closeModal()">&times;</div>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    
+</body>
+<script src="js/script.js"></script>
+</html>
